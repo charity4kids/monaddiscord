@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-       <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Monad - Verify Wallet</title>
@@ -29,13 +29,18 @@
             width: 120px;
             height: 120px;
             margin: 0 auto 20px;
-            background: #5865f2;
+            background: #5865f2; /* fallback color */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 60px;
-            color: white;
+            overflow: hidden;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ensures the image fills the circle nicely */
+            border-radius: 50%;
         }
         h1 { margin: 10px 0; font-size: 24px; }
         p { color: #b9bbbe; margin-bottom: 30px; }
@@ -56,14 +61,11 @@
 <body>
     <div class="container">
         <div class="logo">
-               <img src="monad.svg" alt="ses">
+            <img src="monad.svg" alt="Monad Logo">
         </div>
         <h1>Verify Wallet</h1>
         <p>Connect your wallet to join the Monad community on Discord.</p>
         <button onclick="login()">Verify Wallet</button>
     </div>
-
-    <!-- External script loaded early -->
- 
 </body>
 </html>
