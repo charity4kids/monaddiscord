@@ -29,17 +29,18 @@
             width: 120px;
             height: 120px;
             margin: 0 auto 20px;
-            background: #5865f2; /* fallback color */
+            background: transparent;           /* removed blue background */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            box-shadow: 0 0 0 8px rgba(88, 101, 242, 0.15); /* subtle glow like real UI */
         }
         .logo img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* ensures the image fills the circle nicely */
+            object-fit: contain;     /* changed to contain so the full logo shows nicely */
             border-radius: 50%;
         }
         h1 { margin: 10px 0; font-size: 24px; }
@@ -61,7 +62,7 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="monad.png" alt="Monad Logo">
+            <img src="monad.svg" alt="Monad Logo">
         </div>
         <h1>Verify Wallet</h1>
         <p>Connect your wallet to join the Monad community on Discord.</p>
